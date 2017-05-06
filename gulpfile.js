@@ -36,6 +36,7 @@ var merge = require('gulp-merge');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var del = require('del');
+var autoprefixer = require('gulp-autoprefixer');
 
 function swallowError(self, error) {
     console.log(error.toString())
@@ -91,6 +92,10 @@ gulp.task('sass', function () {
     var stream = gulp.src('./sass/*.scss')
         .pipe(plumber({ errorHandler: function (error) { swallowError(this, error); } }))
         .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest('./css'))
         .pipe(rename('custom-editor-style.css'))
         .pipe(gulp.dest('./css'));

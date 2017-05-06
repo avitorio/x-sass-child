@@ -7,14 +7,13 @@
     "type": "git",
     "url": "https://github.com/avitorio/x-sass-child.git"
   },
-    "keywords": [
+  "keywords": [
     "wordpress",
     "theme",
     "framework",
     "x theme",
     "x child"
   ],
-
   "author": "Andre Vitorio",
   "license": "GPL-2.0",
   "bugs": {
@@ -38,7 +37,7 @@
     "gulp-uglify": "^2.0.1",
     "gulp-watch": "^4.3.11",
     "merge2": "^1.0.3",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",   
+    "gulp-autoprefixer": "^3.1.1"
   }
-    
 }
